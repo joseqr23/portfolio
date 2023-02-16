@@ -1,0 +1,189 @@
+/* The Modal (background) */
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	padding-top: 100px;
+	/* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	overflow: auto;
+	/* Enable scroll if needed */
+	background-color: rgb(0, 0, 0);
+	/* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9);
+	/* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+}
+
+
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+	.modal-content {
+		width: 100%;
+	}
+}
+
+
+#modal-container,
+#caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {
+		transform: scale(0)
+	}
+
+	to {
+		transform: scale(1)
+	}
+}
+
+
+
+/* ==========
+	Carousel
+	==========*/
+
+#carouselExampleControls {
+	width: auto;
+	height: auto;
+	max-width: 499px;
+	max-height: 599px;
+	/* border: 1px solid green; */
+}
+
+.carousel-inner {
+	border-radius: 10px;
+}
+
+.carousel-item {
+	transition: all 0.3s;
+}
+
+#modal-carousel-img {
+	width: auto;
+	height: auto;
+	min-width: 500px;
+	min-height: 500px;
+	max-width: 500px;
+	max-height: 500px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+#secondcarousel span {
+	background-color: #363636;
+	width: 50px;
+	height: 70px;
+	border-radius: 10px;
+	opacity: 0.4;
+}
+
+.slider-container .slider-controls span:hover {
+	border-radius: 10px;
+	cursor: pointer;
+	opacity: 1.0;
+}
+
+/* ==========
+  End Carousel
+	==========*/
+
+
+	
+/* ==========
+  Div Proyect Info
+	==========*/
+#modal-container {
+	width: auto;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -50px;
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px;
+	/* border: 1px solid blue; */
+}
+
+#modal-container-child {
+	display: flex;
+	width: auto;
+	height: auto;
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 10px;
+}
+
+#modal-container-child #info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #fff;
+	border-radius: 10px;
+	border: 1px solid blue;
+}
+
+#modal-container-child #info img {
+	width: 60px;
+	border-radius: 50%;
+}
+
+#modal-container-child #info a {
+	font-family: 'Raleway';
+	font-size: 20px;
+	color: #000;
+	text-decoration: none;
+}
+
+#modal-container-child #info a:hover {
+	opacity: 0.8;
+}
+
+
+#modal-container-child #info p {
+	margin: 20px;
+	border: 1px solid blue;
+}
+
+/* ==========
+  End Div Proyect Info
+	==========*/

@@ -1,0 +1,313 @@
+:root {
+	--width: 300px;
+	--padding: 10px;
+	--bgcolor: #3a3939;
+	--hovercolor: #212020;
+	--width-collapsed: 60px;
+	--width-collapsed-profile: 80px;
+	--blackcolor1: #171616;
+	--blackcolor2: #0f0e0e;
+	--blackcolor3: #060606;
+	--blackcolor4: #212020;
+	--border-header-logo: 5px;
+}
+
+#main-container {
+	color: white;
+}
+
+/* Side Menu */
+#sidemenu {
+	background-color: var(--blackcolor2);
+	color: white;
+	position: fixed;
+	height: 100%;
+	left: 0;
+	top: 0;
+	transition: all 0.3s;
+}
+
+#sidemenu a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/* =============
+		 Header
+	============= */
+#sidemenu #header {
+	box-sizing: boder-box;
+	border-bottom: solid 1px var(--hovercolor);
+}
+
+#sidemenu #header #title {
+	box-sizing: boder-box;
+	overflow: hidden;	
+}
+
+#sidemenu #header #title img {
+	border-radius: var(--border-header-logo);
+	width: 30px;
+}
+
+#sidemenu #header #title,
+#sidemenu #header #menu-btn {
+	vertical-align: middle;
+}
+
+#sidemenu #header #menu-btn {
+	display: inline-block;
+	cursor: pointer;
+	padding: 10px;
+
+	width: 50px;
+	box-sizing: border-box;
+}
+
+#sidemenu #header #menu-btn .btn-burger {
+	background: #fff;
+	width: 100%;
+	height: 2px;
+	margin: 5px 0;
+}
+
+
+
+#header {
+	display: flex;
+	justify-content: space-between;
+}
+
+#header #menu-btn:hover {
+	background: var(--hovercolor);
+}
+
+
+
+/* =============
+		Profile
+	============= */
+
+#sidemenu #profile {
+	border-bottom: solid 1px var(--hovercolor);
+	padding: var(--padding) 0;
+	text-align: center;
+}
+
+#sidemenu #profile #photo {
+	box-sizing: border-box;
+	padding: var(--padding) 0;
+	margin: 10px auto;
+}
+
+#sidemenu #profile #photo img {
+	border-radius: 50%;
+	width: 60%;
+}
+
+#sidemenu #profile #photo,
+#sidemenu #profile #name {
+	font-size: 20px;
+	overflow: hidden;
+}
+
+
+/* --------------Contact-------------- */
+
+#sidemenu #profile #contact {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	margin: 15px;
+	
+	/* border: 1px solid blue; */
+}
+
+#sidemenu #profile #contact a {
+	display: flex;
+	width: 50px;
+	height: 50px;
+
+}
+
+#sidemenu #profile #contact img {
+	border-radius: 50%;
+	width: auto;
+	height: auto;
+}
+
+#sidemenu #profile #contact img:hover {
+	transform: scale(1.1);
+	filter: brightness(0.5);
+}
+
+/* --------------End Contact-------------- */
+
+/* =============
+	 End Profile
+	============= */
+
+
+
+/* =============
+		 Items
+	============= */
+
+#sidemenu #menu-items {
+	overflow: hidden;
+}
+
+#sidemenu #menu-items .item a {
+	display: none;
+}
+
+#sidemenu #menu-items .item .icon {
+	display: inline-block;
+	margin: 5px;
+}
+
+#sidemenu #menu-items .item .icon,
+#sidemenu #menu-items .item .title {
+	font-size: 17px;
+	vertical-align: middle;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#sidemenu #menu-items .item a {
+	display: block;
+}
+
+#sidemenu #menu-items .item a:hover {
+	background-color: var(--hovercolor);
+}
+
+#sidemenu #menu-items .item .icon {
+	box-sizing: border-box;
+	padding: var(--padding);
+	width: var(--width-collapsed);
+}
+
+#sidemenu #menu-items .item .icon img {
+	width: 100%;
+	border-radius: var(--border-header-logo); 
+}
+
+#sidemenu #menu-items .item .title {
+	padding: var(--padding) 0;
+}
+
+/* #sidemenu #menu-items .item.separator {
+	height: 1px;
+	border-bottom: solid 1px var(--hovercolor);
+	margin: 15px 0;
+} */
+
+/* =============
+	  End Items
+	============= */
+
+
+
+/* =============
+	Menu Expanded
+	============= */
+.menu-expanded {
+	width: var(--width);
+	box-shadow: #ff7d7d;
+	transition: all 0.3s;
+}
+
+.menu-expanded #header #title {
+	display: inline-block;
+	width: calc(100% -50px);
+	margin-right: -5px;
+	padding: var(--padding);
+}
+
+.menu-expanded #header #title span {
+	width: calc(var(--width) - var(--width-collapsed)- 5px);
+	overflow: hidden;
+}
+
+.menu-expanded #header #menu-btn {
+	align-items: flex-end;
+}
+
+.menu-expanded #profile #photo {
+	width: 200px;
+}
+
+.menu-expanded #profile #name {
+	width: 100%;
+}
+
+/* =============
+	End Menu Expanded
+	============= */
+
+
+/* =============
+	Menu Collapsed
+	============= */
+
+.menu-collapsed {
+	width: var(--width-collapsed);
+}
+
+
+.menu-collapsed #header #menu-btn {
+	margin: 3px;
+	margin-left: 4.5px;
+}
+
+.menu-collapsed #header:hover {
+	background: var(--hovercolor);
+}
+
+.menu-collapsed #header #title {
+	display: none;
+}
+
+
+.menu-collapsed #profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-collapsed #profile #photo {
+	position: absolute;
+}
+
+
+.menu-collapsed #profile #name,
+.menu-collapsed #profile #contact a,
+.menu-collapsed #profile #contact img {
+	display: none;
+}
+
+
+.menu-collapsed .item {
+	width: 100px;
+	margin-left: -5.5px;
+}
+
+.menu-collapsed .item a .title span {
+	display: none;
+}
+
+/* .menu-collapsed .item a .icon img {
+	
+} */
+
+
+
+.menu-collapsed #main-container {
+	display: none;
+}
+
+/* =============
+  End Menu Expanded
+	============= */
