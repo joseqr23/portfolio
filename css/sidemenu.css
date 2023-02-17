@@ -43,12 +43,12 @@
 
 #sidemenu #header #title {
 	box-sizing: boder-box;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 #sidemenu #header #title img {
 	border-radius: var(--border-header-logo);
-	width: 30px;
+	width: 36px;
 }
 
 #sidemenu #header #title,
@@ -57,11 +57,16 @@
 }
 
 #sidemenu #header #menu-btn {
-	display: inline-block;
+	/* display: inline-block; */
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	cursor: pointer;
 	padding: 10px;
 
-	width: 50px;
+	width: 60px;
 	box-sizing: border-box;
 }
 
@@ -81,6 +86,8 @@
 
 #header #menu-btn:hover {
 	background: var(--hovercolor);
+	color: var(--iconhover);
+	width: auto;
 }
 
 
@@ -97,8 +104,9 @@
 
 #sidemenu #profile #photo {
 	box-sizing: border-box;
-	padding: var(--padding) 0;
-	margin: 10px auto;
+	padding: 10px;
+	margin: auto;
+	/* border: 1px solid blue; */
 }
 
 #sidemenu #profile #photo img {
@@ -110,6 +118,10 @@
 #sidemenu #profile #name {
 	font-size: 20px;
 	overflow: hidden;
+	margin-top: 0px;
+	margin-bottom: 5px;
+
+	/* border: 1px solid blue; */
 }
 
 
@@ -119,22 +131,26 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
-	margin: 15px;
-	
+	margin: 0px 15px 0px 15px;
+
 	/* border: 1px solid blue; */
 }
 
 #sidemenu #profile #contact a {
 	display: flex;
+	align-items: center;
+	justify-content: center;
+
 	width: 50px;
 	height: 50px;
+	background: #000;
+	border-radius: 50%;
 
+	/* border: 1px solid red; */
 }
 
-#sidemenu #profile #contact img {
-	border-radius: 50%;
-	width: auto;
-	height: auto;
+#sidemenu #profile #contact a:hover {
+	color: var(--iconhover);
 }
 
 #sidemenu #profile #contact img:hover {
@@ -165,34 +181,35 @@
 #sidemenu #menu-items .item .icon {
 	display: inline-block;
 	margin: 5px;
-}
-
-#sidemenu #menu-items .item .icon,
-#sidemenu #menu-items .item .title {
-	font-size: 17px;
-	vertical-align: middle;
-	overflow: hidden;
-	display: inline-block;
-}
-
-#sidemenu #menu-items .item a {
-	display: block;
-}
-
-#sidemenu #menu-items .item a:hover {
-	background-color: var(--hovercolor);
-}
-
-#sidemenu #menu-items .item .icon {
 	box-sizing: border-box;
 	padding: var(--padding);
 	width: var(--width-collapsed);
 }
 
-#sidemenu #menu-items .item .icon img {
-	width: 100%;
-	border-radius: var(--border-header-logo); 
+#sidemenu #menu-items .item .icon,
+#sidemenu #menu-items .item .title {
+	font-size: 18px;
+	vertical-align: middle;
+	overflow: hidden;
+	display: inline-block;
 }
+
+
+#sidemenu #menu-items .item .title {
+	margin-left: 15px;
+}
+
+#sidemenu #menu-items .item a {
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+
+#sidemenu #menu-items .item a:hover {
+	background: var(--hovercolor);
+	color: var(--iconhover);
+}
+
 
 #sidemenu #menu-items .item .title {
 	padding: var(--padding) 0;
@@ -212,6 +229,7 @@
 
 /* =============
 	Menu Expanded
+Esto afecta solo al menu cuando esta expandido, no sera su valor por defecto
 	============= */
 .menu-expanded {
 	width: var(--width);
@@ -243,28 +261,38 @@
 	width: 100%;
 }
 
+.menu-expanded #menu-items a {
+	padding-left: 10px;
+}
+
 /* =============
 	End Menu Expanded
 	============= */
 
 
+
+
 /* =============
 	Menu Collapsed
+	Esto afecta solo al menu cuando esta cerrado, no sera su valor por defecto
 	============= */
-
 .menu-collapsed {
 	width: var(--width-collapsed);
 }
 
 
-.menu-collapsed #header #menu-btn {
-	margin: 3px;
-	margin-left: 4.5px;
+.menu-collapsed #header {
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	width: 100%;
+	/* border: 1px solid red; */
 }
 
-.menu-collapsed #header:hover {
-	background: var(--hovercolor);
-}
+/* .menu-collapsed #header #menu-btn {
+	width: 100%;
+} */
+
 
 .menu-collapsed #header #title {
 	display: none;
@@ -278,31 +306,29 @@
 }
 
 .menu-collapsed #profile #photo {
+	width: 100px;
 	position: absolute;
 }
 
-
-.menu-collapsed #profile #name,
-.menu-collapsed #profile #contact a,
-.menu-collapsed #profile #contact img {
+.menu-collapsed #profile #name {
+	translate: -200%;
 	display: none;
 }
+
+.menu-collapsed #profile #contact {
+	translate: -200%;
+}
+
 
 
 .menu-collapsed .item {
 	width: 100px;
-	margin-left: -5.5px;
+	margin-left: -3.0px;
 }
 
 .menu-collapsed .item a .title span {
 	display: none;
 }
-
-/* .menu-collapsed .item a .icon img {
-	
-} */
-
-
 
 .menu-collapsed #main-container {
 	display: none;

@@ -4,6 +4,8 @@
 	--blackcolorbody2: #212020;
 	--blackcolorbody3: #0f0e0e;
 	--blackcolorbody4: #060606;
+
+	--iconhover : red;
 }
 
 /* body {
@@ -13,7 +15,7 @@
 	padding-left: 300px;
 	margin-top: 20px;
 }
-*/ 
+*/
 
 /* body{
 	font-family: 'Raleway';
@@ -21,7 +23,7 @@
 
 body {
 	font-family: 'Montserrat';
-	
+
 	/* * opcional 
 	display: flex; 
 	justify-content: center;
@@ -36,13 +38,13 @@ body {
 	 *Menu Body
 	============= */
 .bodymenu {
-
-	border: 1px solid red;
 	margin-left: 300px;
 	width: auto;
 	height: auto;
 	transition: all 0.3s;
 	padding-top: 25px;
+	
+	border: 1px solid red;
 }
 
 .bodymenu section,
@@ -50,17 +52,59 @@ body {
 	padding-left: 90px;
 }
 
-.bodymenu section h3 {
+/* Linea de texto */
+.bodymenu section #simple-line {
 	margin-left: 1.6px;
 	padding-bottom: 10px;
 	border-bottom: 3px solid #424141;
 	width: 50px;
 }
 
+/* ===================
+	 SECTION SKILLS
+ 	===================  */
+	 
+/* #skills{
+	border: 1px solid red;
+} */
+#skills .skills-languages,
+#skills .skills-backend,
+#skills .skills-frontend,
+#skills .skills-db,
+#skills .skills-extra {
+	padding: 30px;
+	margin-left: 20px;
+
+	/* border: 1px solid red; */
+}
+
+#skills .skills-languages img,
+#skills .skills-backend img,
+#skills .skills-frontend img,
+#skills .skills-db img,
+#skills .skills-extra img{
+	padding-top: 20px;
+	width: 130px;
+	height: 100px;
+	margin-left: 20px;
+	object-fit: contain;
+/* 
+	border: 1px solid red; */
+}
+
+/* ===================
+	END SECTION SKILLS
+ 	===================  */
 
 
-/* ------------- Slider ------------- */
 
+
+
+/* ===================
+	 SECTION PROJECTS
+ 	===================  */
+
+/* Slider */
 .slider-container {
 	width: 530px;
 	height: 600px;
@@ -112,10 +156,10 @@ body {
 	object-fit: cover;
 }
 
-/* .slider-container-child .slider-item img:hover {
+.slider-container-child .slider-item img:hover {
 	filter: brightness(0.8);
 	cursor: pointer;
-} */
+}
 
 
 .slider-container-child .slider-item .slider-text {
@@ -182,8 +226,14 @@ body {
 	opacity: 1.0;
 }
 
+/*End Slider*/
 
-/* ------------- End Slider ------------- */
+
+/* ===================
+	END SECTION PROJECTS
+	===================
+*/
+
 
 
 .footermenu {
@@ -234,7 +284,7 @@ body {
 @media screen and (max-width: 800px) {
 
 	#sidemenu {
-		display: none;
+		translate: -100%;
 	}
 
 	.bodymenu {

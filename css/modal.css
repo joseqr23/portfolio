@@ -126,7 +126,7 @@
 	==========*/
 
 
-	
+
 /* ==========
   Div Proyect Info
 	==========*/
@@ -136,7 +136,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 	margin-top: -50px;
+
 	background: #fff;
 	border-radius: 10px;
 	padding: 10px;
@@ -151,6 +153,12 @@
 	border-radius: 10px;
 }
 
+/* title */
+#modal-container-child h1{
+	margin-top: 20px;
+	border: 1px solid red;
+}
+
 #modal-container-child #info {
 	display: flex;
 	flex-direction: column;
@@ -162,12 +170,37 @@
 	border: 1px solid blue;
 }
 
-#modal-container-child #info img {
-	width: 60px;
-	border-radius: 50%;
+
+#modal-container-child #info p {
+	margin: 15px;
+	border: 1px solid blue;
 }
 
+#modal-container-child #info span {
+	border: 1px solid blue;
+}
+
+
+#modal-container-child #info #img-tech {
+	width: 70%;
+	height: auto;
+	border: 1px solid blue;
+}
+
+/* used tech  */
+#modal-container-child #info #img-tech img {
+	width: 70px;
+	height: 70px;
+	object-fit: contain;
+	border-radius: 3px;
+
+	/* border: 1px solid red; */
+}
+
+
+/* view repo  */
 #modal-container-child #info a {
+	padding-top: 14px;
 	font-family: 'Raleway';
 	font-size: 20px;
 	color: #000;
@@ -178,11 +211,12 @@
 	opacity: 0.8;
 }
 
-
-#modal-container-child #info p {
-	margin: 20px;
-	border: 1px solid blue;
+#modal-container-child #info a img {
+	width: 50px;
+	border-radius: 50%;
+	/* border: 1px solid red; */
 }
+
 
 /* ==========
   End Div Proyect Info

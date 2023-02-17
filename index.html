@@ -26,6 +26,11 @@
 	<link rel="stylesheet" href="./css/sidemenu.css">
 	<link rel="stylesheet" href="./css/body.css">
 	<link rel="stylesheet" href="./css/modal.css">
+	<link rel="stylesheet" href="./css/logos.css">
+
+
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 
 	<title>Portfolio | José Leandro Quispe Reyes</title>
 
@@ -42,9 +47,7 @@
 				<img src="./img/logo/logo.png" alt="">
 			</div>
 			<div id="menu-btn">
-				<div class="btn-burger"></div>
-				<div class="btn-burger"></div>
-				<div class="btn-burger"></div>
+				<i class="fa fa-bars" aria-hidden="true"></i>
 			</div>
 		</div>
 
@@ -59,17 +62,17 @@
 
 			<div id="contact">
 				<a href="https://github.com/joseqr23" target="_blank">
-					<img id="githublogo" src="./img/logo/contact/github.png" alt="GitHub">
+					<i class="fa fa-github" aria-hidden="true"></i>
 				</a>
 				<a href="https://www.linkedin.com/in/joseqr23/" target="_blank">
-					<img id="linkedinlogo" src="./img/logo/contact/linkedin.png" alt="Linkedin">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
 				</a>
 				<!-- mailto:jquisper3@gmail.com -->
 				<a href="https://mail.google.com/mail/?view=cm&to=jquisper2%40gmail.com" target="_blank">
-					<img id="gmaillogo" src="./img/logo/contact/gmail.png" alt="Gmail">
+					<i class="fa fa-envelope" aria-hidden="true"></i>
 				</a>
 				<a href="https://twitter.com/JosQuispeReyes1" target="_blank">
-					<img id="twitterlogo" src="./img/logo/contact/twitter.png" alt="Twitter">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
 				</a>
 			</div>
 
@@ -81,7 +84,7 @@
 			<div class="item">
 				<a href="#homepage">
 					<div class="icon">
-						<img src="./img/logo/logo.png" alt="">
+						<i class="fa fa-home" aria-hidden="true"></i>
 					</div>
 					<div class="title">
 						<span>Home</span>
@@ -90,9 +93,21 @@
 			</div>
 
 			<div class="item">
+				<a href="#about">
+					<div class="icon">
+						<i class="fa fa-user-o" aria-hidden="true"></i>
+					</div>
+					<div class="title">
+						<span>About Me</span>
+					</div>
+				</a>
+			</div>
+
+
+			<div class="item">
 				<a href="#skills">
 					<div class="icon">
-						<img src="./img/logo/logo.png" alt="">
+						<i class="fa fa-code" aria-hidden="true"></i>
 					</div>
 					<div class="title">
 						<span>Skills</span>
@@ -100,10 +115,11 @@
 				</a>
 			</div>
 
+
 			<div class="item">
 				<a href="#projects">
 					<div class="icon">
-						<img src="./img/logo/logo.png" alt="">
+						<i class="fa fa-tasks" aria-hidden="true"></i>
 					</div>
 					<div class="title">
 						<span>Projects</span>
@@ -115,7 +131,7 @@
 			<div class="item">
 				<a href="#etc">
 					<div class="icon">
-						<img src="./img/logo/logo.png" alt="">
+						<i class="fa fa-cogs" aria-hidden="true"></i>
 					</div>
 					<div class="title">
 						<span>Etc</span>
@@ -137,7 +153,7 @@
 		<section id="homepage">
 			<div id="container">
 				<h1>Home</h1>
-				<h3></h3>
+				<h3 id="simple-line"></h3>
 			</div>
 		</section>
 
@@ -145,11 +161,8 @@
 
 		<section id="about">
 			<div id="container">
-				<h1>
-					About me
-					<h3></h3>
-
-				</h1>
+				<h1>About me</h1>
+				<h3 id="simple-line"></h3>
 
 			</div>
 		</section>
@@ -158,25 +171,73 @@
 		<section id="skills">
 			<div id="container">
 				<h1>Skills</h1>
-				<h3></h3>
+				<h3 id="simple-line"></h3>
+
+				<div class="skills-languages">
+					<h3><i class="fa fa-code-fork" aria-hidden="true"></i> Languages</h3>
+					<img style="padding: 10px;" src="./img/technologies/python.png" alt="">
+					<img src="./img/technologies/javascript.png" alt="">
+					<img src="./img/technologies/typescript.svg" alt="">
+				</div>
+
+				<div class="skills-backend">
+					<h3><i class="fa fa-terminal" aria-hidden="true"></i> Backend</h3>
+					<img style="padding: 10px;" src="./img/technologies/django.png" alt="">
+					<img src="./img/technologies/flask.svg" alt="">
+					<img src="./img/technologies/nodejs.svg" alt="">
+					<img src="./img/technologies/expressjs.svg" alt="">
+				</div>
+
+				<div class="skills-frontend">
+					<h3><i class="fa fa-file-text" aria-hidden="true"></i> Frontend</h3>
+					<img src="./img/technologies/html.svg" alt="">
+					<img src="./img/technologies/css.svg" alt="">
+					<img src="./img/technologies/javascript.svg" alt="">
+					<img src="./img/technologies/bootstrap5.svg" alt="">
+					<img src="./img/technologies/reactjs.png" alt="">
+				</div>
+
+
+				<div class="skills-db">
+					<h3><i class="fa fa-database" aria-hidden="true"></i> Databases | ORM</h3>
+					<img src="./img/technologies/sqlserver.svg" alt="">
+					<img src="./img/technologies/mysql.png" alt="">
+					<img src="./img/technologies/sqlite.png" alt="">
+					<img src="./img/technologies/prisma.svg" alt="">
+					<img src="./img/technologies/postgre.png" alt="">
+					<img src="./img/technologies/mongodb.png" alt="">
+				</div>
+
+				<div class="skills-extra">
+					<h3><i class="fa fa-cog" aria-hidden="true"></i> Extra</h3>
+					<img style="padding: 10px;" src="./img/technologies/github.svg" alt="">
+					<img src="./img/technologies/docker.svg" alt="">
+					<img src="./img/technologies/vscode.svg" alt="">
+					<img src="./img/technologies/aws.svg" alt="">
+				</div>
+
 			</div>
 		</section>
 
 
 		<section id="projects">
 			<h1>Proyectos</h1>
-			<h3></h3>
+			<h3 id="simple-line"></h3>
 			<h4>En esta sección se encuentran los proyectos que he realizado tanto de forma individual como de forma
 				educativa.</h4>
 			<!-- Carousel -->
 			<div id="demo" class="carousel slide slider-container" data-bs-ride="carousel">
-				
+
 				<!-- The slideshow/carousel -->
 				<div class="carousel-inner slider-container-child">
 
 					<div id="proyecto1">
+
+						<!-- slider menu -->
 						<div class="carousel-item active  slider-item">
-							<img src="./img/projects/petz/menu.PNG" alt="Petz" class="d-block">
+							<a href="https://frontend-942d0fpub-proyectou8.vercel.app/" target="_blank">
+								<img src="./img/projects/petz/menu.PNG" alt="Petz" class="d-block">
+							</a>
 							<h1>
 								Proyecto Petz
 							</h1>
@@ -187,6 +248,7 @@
 							<button id="myImg1">Ver más</button>
 						</div>
 
+						<!-- modal menu -->
 						<div id="fileproject1" style="display: none;">
 							<h1>Petz</h1>
 							<p>
@@ -197,6 +259,15 @@
 								se realicen diagnósticos a las mascotas.
 							</p>
 							<span>Tecnologías usadas</span>
+							<div id="img-tech">
+								<img src="./img/technologies/typescript.svg" alt="">
+								<img src="./img/technologies/nodejs.png" alt="">
+								<img src="./img/technologies/expressjs.svg" alt="">
+								<img src="./img/technologies/reactjs.png" alt="">
+								<img src="./img/technologies/html-css-js-2.png" alt="">
+								<img src="./img/technologies/supabase.svg" alt="">
+								<img src="./img/technologies/prisma.svg" alt="">
+							</div>
 							<a href="https://github.com/orgs/ProyectoUnidad8/repositories" target="_blank">
 								<img src="./img/logo/contact/github.png" alt=""><br>
 								Ver repositorio
@@ -206,19 +277,25 @@
 					</div>
 
 
+
 					<div id="proyecto2">
 
+						<!-- slider menu -->
 						<div class="carousel-item slider-item">
-							<img src="./img/projects/rickandmorty/menu.PNG" alt="RickAndMortyApi" class="d-block">
+							<a href="#" target="_blank">
+								<img src="./img/projects/rickandmorty/menu.PNG" alt="RickAndMortyApi" class="d-block">
+							</a>
 							<h1>
 								Proyecto Rick y Morty
 							</h1>
 							<div class="slider-text">
-								<p>Consumo y renderización de API de Rick and Morty con vista a personajes de manera individual</p>
+								<p>Consumo y renderización de API de Rick and Morty con vista a personajes de manera individual
+								</p>
 							</div>
 							<button id="myImg2">Ver más</button>
 						</div>
 
+						<!-- modal menu -->
 						<div id="fileproject2" style="display: none;">
 							<h1>Rick And Morty</h1>
 							<p>
@@ -228,6 +305,11 @@
 								También cuenta con una vista que muestra los datos detallados de cada personaje.
 							</p>
 							<span>Tecnologías usadas</span>
+							<div id="img-tech">
+								<img src="./img/technologies/python.png" alt="">
+								<img src="./img/technologies/flask.svg" alt="">
+								<img src="./img/technologies/sqlite.png" alt="">
+							</div>
 							<a href="https://github.com/joseqr23/Api-RickAndMorty" target="_blank">
 								<img src="./img/logo/contact/github.png" alt=""><br>
 								Ver repositorio
@@ -239,8 +321,11 @@
 
 					<div id="proyecto3">
 
+						<!-- slider menu -->
 						<div class="carousel-item slider-item">
-							<img src="./img/projects/rickandmorty/listsection.PNG" alt="RickAndMortyApi" class="d-block">
+							<a href="#" target="_blank">
+								<img src="./img/projects/rickandmorty/listsection.PNG" alt="RickAndMortyApi" class="d-block">
+							</a>
 							<h1>
 								TEST 3
 							</h1>
@@ -250,6 +335,7 @@
 							<button id="myImg3">Ver más</button>
 						</div>
 
+						<!-- modal menu -->
 						<div id="fileproject3" style="display: none;">
 							<h1>Test</h1>
 							<p>
@@ -260,6 +346,9 @@
 								placeat earum! Doloribus?
 							</p>
 							<span>Tecnologías usadas</span>
+							<div id="img-tech">
+								<img src="./img/technologies/css.svg" alt="">
+							</div>
 							<a href="#" target="_blank">
 								<img src="./img/logo/contact/github.png" alt=""><br>
 								Ver repositorio
@@ -284,6 +373,7 @@
 
 		</section>
 
+
 		<!-- Modal Projects -->
 		<div id="myModal" class="modal">
 			<!-- The Close Button -->
@@ -307,7 +397,7 @@
 		<section id="etc">
 			<div id="container">
 				<h1>Etc</h1>
-				<h3></h3>
+				<h3 id="simple-line"></h3>
 			</div>
 		</section>
 
@@ -353,6 +443,7 @@
 	<script src="./js/sidemenu.js"></script>
 	<script src="./js/index.js"></script>
 
+	<script src="https://kit.fontawesome.com/cc01e18be7.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
