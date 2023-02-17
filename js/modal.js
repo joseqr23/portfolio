@@ -60,9 +60,17 @@ function sliderFunction() {
 img1.onclick = function () {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
+		"../img/projects/petz/menu.PNG",
 		"../img/projects/petz/adoptsection.PNG",
-		"../img/projects/petz/modals.PNG",
+		"../img/projects/petz/user/mypetssection.PNG",
+		"../img/projects/petz/user/mypetsdiagnosticsection.PNG",
 		"../img/projects/petz/profilesection.PNG",
+		"../img/projects/petz/admin/clientsection.PNG",
+		"../img/projects/petz/admin/petsection.PNG",
+		"../img/projects/petz/admin/diagnosticsection.PNG",
+		"../img/projects/petz/admin/petadoptionsection.PNG",
+		"../img/projects/petz/modals.PNG",
+		"../img/projects/petz/admin/applicationsection.PNG",
 	)
 
 	info.innerHTML = content1.innerHTML;
@@ -71,6 +79,7 @@ img1.onclick = function () {
 img2.onclick = function () {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
+		"../img/projects/rickandmorty/menu.PNG",
 		"../img/projects/rickandmorty/listsection.PNG",
 		"../img/projects/rickandmorty/detailcharacter.PNG",
 	)

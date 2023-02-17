@@ -1,0 +1,67 @@
+/* Menu bar section */
+.fa.fa-home {
+	margin-left: 0.5px;
+	font-size: 30px;
+}
+
+.fa.fa-user-o {
+	margin-left: 2.5px;
+	font-size: 33px;
+}
+
+.fa.fa-code {
+	margin-left: -1px;
+	font-size: 30px;
+}
+
+.fa.fa-tasks {
+	margin-left: 3px;
+	font-size: 30px;
+}
+
+.fa.fa-bars {
+	font-size: 36px;
+}
+
+.fa.fa-cogs {
+	font-size: 28px;
+}
+
+
+
+/* Contact section */
+.fa.fa-github {
+	font-size: 33px;
+}
+
+.fa.fa-linkedin {
+	font-size: 25px;
+}
+
+.fa.fa-envelope {
+	font-size: 25px;
+}
+
+.fa.fa-twitter {
+	font-size: 25px;
+}
+
+
+/* Skills section */
+.fa.fa-terminal{
+	font-size: 24px;
+	background: #000;
+	color: #fff;
+	padding: 2px;
+	border-radius: 2px;
+}
+/* .fa.fa-database{
+
+}
+.fa.fa-cog{
+
+}.
+fa.fa-code-fork{
+
+} */
+
