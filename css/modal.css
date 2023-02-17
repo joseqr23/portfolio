@@ -178,12 +178,14 @@
 
 #modal-container-child #info span {
 	border: 1px solid blue;
+
 }
 
 
 #modal-container-child #info #img-tech {
 	width: 70%;
 	height: auto;
+
 	border: 1px solid blue;
 }
 
@@ -192,8 +194,9 @@
 	width: 70px;
 	height: 70px;
 	object-fit: contain;
-	border-radius: 3px;
+	border-radius: 2px;
 
+	margin: 5px;
 	/* border: 1px solid red; */
 }
 
