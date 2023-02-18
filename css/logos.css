@@ -49,7 +49,6 @@
 
 /* Skills section */
 .fa.fa-terminal{
-	font-size: 24px;
 	background: #000;
 	color: #fff;
 	padding: 2px;
@@ -65,3 +64,12 @@ fa.fa-code-fork{
 
 } */
 
+
+/* FOOTER SECTION */
+
+#footer-logo-gmail,
+#footer-logo-twitter,
+#footer-logo-linkedin,
+#footer-logo-github{
+	font-size: 17px;
+}

@@ -5,6 +5,9 @@
 	--blackcolorbody3: #0f0e0e;
 	--blackcolorbody4: #060606;
 
+	--footer-color: #272727;
+	--footer-button-color: #424141;
+	--footer-bar-color: #212020;
 	--iconhover: red;
 }
 
@@ -44,15 +47,18 @@ body {
 	transition: all 0.3s;
 	padding-top: 25px;
 
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
 
 /* Control body sections */
-.bodymenu section,
-.bodymenu footer {
+.bodymenu section {
 	padding-left: 90px;
 	/* border: 1px solid red; */
 }
+
+/* .bodymenu section h1 {
+	font-size: 3vw;
+} */
 
 
 /* Linea de texto */
@@ -62,6 +68,18 @@ body {
 	border-bottom: 3px solid #424141;
 	width: 50px;
 }
+
+/* ===================
+	   SECTION HOME
+ 	===================  */
+/* #homepage .home-presentation {
+	padding: 5px;
+	margin-left: 20px;
+} */
+/* ===================
+	 END SECTION HOME
+ 	===================  */
+
 
 /* ===================
 	 SECTION SKILLS
@@ -81,9 +99,24 @@ body {
 	/* border: 1px solid red; */
 }
 
+/* #skills .skills-languages h3,
+#skills .skills-backend h3,
+#skills .skills-frontend h3,
+#skills .skills-db h3,
+#skills .skills-extra h3{
+	font-size: 2vw;
+
+	border: 1px solid red;
+} 
+*/
+
 #skills #img-content {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: left;
+	align-items: center;
+	margin-left: 20px;
+
 	/* border: 1px solid red; */
 }
 
@@ -92,13 +125,14 @@ body {
 #skills .skills-frontend #img-content img,
 #skills .skills-db #img-content img,
 #skills .skills-extra #img-content img {
-
+	margin: 10px;
 	padding-top: 20px;
-	width: 130px;
-	height: 100px;
-	margin-left: 20px;
+	max-width: 130px;
+	max-height: 100px;
+	width: 100%;
+	height: 100%;
 	object-fit: contain;
-	/* 
+	/* 	
 	border: 1px solid red; */
 }
 
@@ -118,25 +152,121 @@ body {
 
 /* ===================
 	END SECTION PROJECTS
-	===================
-*/
+	=================== */
 
 
+
+/* ===================
+	     FOOTER
+	===================  */
 
 .footermenu {
-	margin-top: 30px;
+	margin-top: 100px;
 	position: static;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: var(--blackcolorbody2);
-	border: 1px solid var(--blackcolorbody2);
+	background-color: var(--footer-color);
 	color: #fff;
 }
 
-/* =============
-   *End Menu Body
-	============= */
+/* ---------- CONTACT FOOTER ---------- */
+.footermenu .contact-me {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+
+	text-align: center;
+	color: #fff;
+	background: var(--footer-bar-color);
+	border-radius: 1px;
+
+	position: relative;
+	top: -50px;
+	margin: 0px 60px 0px 60px;
+	padding: 15px 25px 15px 25px;
+}
+
+.footermenu .contact-me #contact-text h2,
+.footermenu .contact-me #contact-text h3 {
+	font-size: 23px;
+}
+
+.footermenu .contact-me #contact-button {
+	background-color: var(--footer-button-color);
+	padding: 10px 20px 10px 20px;
+	width: auto;
+	border-radius: 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footermenu .contact-me #contact-button a {
+	text-decoration: none;
+	margin: -10px -20px -10px -20px;
+	padding: 10px 20px 10px 20px;
+	color: #fff;
+}
+
+.footermenu .contact-me #contact-button a:hover {
+	opacity: 0.7;
+}
+
+
+/* ---------- CONTAINER FOOTER ---------- */
+
+/* .footermenu .footer-container {
+	 border: 1px solid yellow 
+} */
+
+.footermenu .footer-container .footer-row {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -35px;
+	/* border: 1px solid blue; */
+}
+
+.footermenu .footer-container .footer-row .footer-col {
+	margin: 0px 60px;
+	align-self: flex-start;
+	/* border: 1px solid yellow; */
+}
+
+/* Titles footer */
+.footermenu .footer-container .footer-row .footer-col h3 {
+	font-size: 18px;
+	font-family: 'Roboto';
+	color: #fff;
+}
+
+/* follow and links */
+.footermenu .footer-container .footer-row .footer-col li a {
+	text-decoration: none;
+	font-size: 15px;
+	color: #666873;
+}
+
+.footermenu .footer-container .footer-row .footer-col li a:hover {
+	color: #fff;
+}
+
+.footermenu .copyright {
+	border: 1px solid var(--footer-color);
+}
+
+/* ===================
+	     FOOTER
+	===================  */
+
+
+
+/* ========================
+   	  *End Menu Body
+	======================== */
 
 
 
@@ -167,7 +297,6 @@ body {
 	}
 }
 
-
 @media screen and (max-width: 800px) {
 
 	#sidemenu {
@@ -185,4 +314,15 @@ body {
 		padding-left: 5px;
 	}
 
+}
+
+@media screen and (max-width: 190px) {
+
+	#skills .skills-languages h3,
+	#skills .skills-backend h3,
+	#skills .skills-frontend h3,
+	#skills .skills-db h3,
+	#skills .skills-extra h3 {
+		font-size: 5vw;
+	}
 }
