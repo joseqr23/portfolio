@@ -416,7 +416,7 @@ body {
 	#about .about-content {
 		justify-content: center;
 		flex-wrap: wrap;
-		border: 1px solid red;
+		
 	}
 
 	#about .about-content .img-info {
