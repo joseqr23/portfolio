@@ -401,11 +401,19 @@ body {
 		margin: auto;
 		padding: auto;
 	}
+	
+	.bodymenu #background{
+		padding: 0px;
+	}
 
 	.bodymenu section,
 	.bodymenu footer {
-		padding-left: 5px;
+		padding: 0px 15px;
 	}
+
+
+	
+
 
 	#background {
 		margin-left: -5px;
