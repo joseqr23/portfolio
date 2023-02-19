@@ -11,19 +11,6 @@
 	--iconhover: red;
 }
 
-/* body {
-	background: #fff;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 18px;
-	padding-left: 300px;
-	margin-top: 20px;
-}
-*/
-
-/* body{
-	font-family: 'Raleway';
-} */
-
 body {
 	font-family: 'Montserrat';
 
@@ -34,9 +21,6 @@ body {
 }
 
 
-
-/*opcional activar zindex */
-
 /* =============
 	 *Menu Body
 	============= */
@@ -46,20 +30,12 @@ body {
 	height: auto;
 	transition: all 0.3s;
 	padding-top: 25px;
-
-	/* border: 1px solid red; */
 }
 
 /* Control body sections */
 .bodymenu section {
 	padding-left: 90px;
-	/* border: 1px solid red; */
 }
-
-/* .bodymenu section h1 {
-	font-size: 3vw;
-} */
-
 
 /* Linea de texto */
 .bodymenu section #simple-line {
@@ -71,20 +47,14 @@ body {
 
 
 
-
 /* ===================
-	   SECTION BACKGROUND
+	SECTION BACKGROUND
  	===================  */
 
 #background {
 	margin-left: -91px;
 	margin-top: -25px;
-	/* border: 1px solid red; */
 }
-
-/* #background .content-background {
-	overflow: hidden;
-} */
 
 #background .content-background img {
 	max-width: auto;
@@ -95,7 +65,7 @@ body {
 }
 
 /* ===================
-	 END SECTION BACKGROUND
+	END SECTION BACKGROUND
  	===================  */
 
 
@@ -105,8 +75,13 @@ body {
 	   SECTION HOME
  	===================  */
 #homepage {
+	margin-top: 40px;
+}
+
+#homepage .home-presentation {
 	margin-top: 20px;
 }
+
 /* ===================
 	 END SECTION HOME
  	===================  */
@@ -114,12 +89,69 @@ body {
 
 
 /* ===================
+	  SECTION ABOUT ME
+ 	===================  */
+#about {
+	margin-top: 40px;
+}
+
+#about .about-content {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: left;
+}
+
+#about .about-content .img-info {
+	width: 400px;
+	height: auto;
+	padding-left: 30px;
+}
+
+#about .about-content .img-info img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+#about .about-content .about-info {
+	margin-left: 70px;
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+}
+
+#about .about-content .about-info h4 {
+	font-weight: 700;
+}
+
+#about .about-content .about-info .about-data {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+}
+
+#about .about-content .about-info .about-data p {
+	width: 50%;
+}
+
+/* ===================
+	END SECTION  ABOUT ME
+	===================  */
+
+
+
+
+
+/* ===================
 	 SECTION SKILLS
  	===================  */
 
-/* #skills{
-	border: 1px solid red;
-} */
+#skills {
+	margin-top: 40px;
+}
 
 #skills .skills-languages,
 #skills .skills-backend,
@@ -176,16 +208,33 @@ body {
 /* ===================
 	 SECTION PROJECTS
  	===================  */
-/* #projects .content-project {
-		 display: flex;
-		  border: 1px solid red;
-} */
+#projects {
+	margin-top: 40px;
+}
 
+#projects h4 {
+	margin-top: 20px;
+}
 
 /* ===================
 	END SECTION PROJECTS
 	=================== */
 
+
+/* ===================
+	    SECTION ETC
+	=================== */
+#etc {
+	margin-top: 40px;
+}
+
+#etc h4 {
+	margin-top: 20px;
+}
+
+/* ===================
+	END SECTION ETC
+	=================== */
 
 
 /* ===================
@@ -331,6 +380,16 @@ body {
 
 
 /* CELLPHONE MEDIAQUERY */
+@media screen and (max-width: 571px) {
+	body{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+/* CELLPHONE MEDIAQUERY */
 @media screen and (max-width: 800px) {
 
 	#sidemenu {
@@ -353,7 +412,36 @@ body {
 		margin-top: -25px;
 		/* border: 1px solid red; */
 	}
+
+	#about .about-content {
+		justify-content: center;
+		flex-wrap: wrap;
+		border: 1px solid red;
+	}
+
+	#about .about-content .img-info {
+		margin-left: -70px;
+	}
+
+	#about .about-content .about-info {
+		margin: 10px 200px;
+
+	}
+
 }
+
+@media screen and (max-width: 1100px) {
+	#about .about-content .about-info .about-data p {
+		width: 100%;
+	}
+
+	#about .about-content .img-info {
+		padding-left: 70px;
+
+	}
+}
+
+
 
 @media screen and (max-width: 190px) {
 
