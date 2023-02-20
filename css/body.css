@@ -29,7 +29,7 @@ body {
 	width: auto;
 	height: auto;
 	transition: all 0.3s;
-	padding-top: 25px;
+	/* padding-top: 25px; */
 }
 
 /* Control body sections */
@@ -46,6 +46,50 @@ body {
 }
 
 
+/* ===================
+	     HEADER
+	===================  */
+
+.bodymenu #headermenu {
+	width: 100%;
+	position: fixed;
+	top: 0;
+
+	transform: translateY(-80px);
+	transition: all 0.3s;
+	
+	padding: -20px;
+	margin: 0;
+	
+	z-index: 1;
+	background-color: #21202084;
+
+}
+.bodymenu #headermenu .navbar {
+	padding: 2px;
+	margin: 0px;
+	
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.bodymenu #headermenu a {
+	color: white;
+	padding: 10px 20px;
+	margin: 0;
+}
+.bodymenu #headermenu a:hover {
+	background-color: var(--blackcolorbody2);
+	border-radius: 2px;
+	color: red;
+}
+
+/* ===================
+	   END HEADER
+	===================  */
+
 
 /* ===================
 	SECTION BACKGROUND
@@ -53,7 +97,7 @@ body {
 
 #background {
 	margin-left: -91px;
-	margin-top: -25px;
+	/* margin-top: -25px; */
 }
 
 #background .content-background img {
@@ -340,7 +384,7 @@ body {
 }
 
 /* ===================
-	     FOOTER
+	     END FOOTER
 	===================  */
 
 
@@ -379,15 +423,7 @@ body {
 }
 
 
-/* CELLPHONE MEDIAQUERY */
-/* @media screen and (max-width: 571px) {
-	body{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-} */
+
 
 /* CELLPHONE MEDIAQUERY */
 @media screen and (max-width: 800px) {
@@ -395,25 +431,27 @@ body {
 	#sidemenu {
 		translate: -100%;
 	}
+
 	.bodymenu {
 		width: 100%;
 		height: 100%;
 		margin: auto;
 		padding: auto;
 	}
-	
-	.bodymenu #background{
+
+	.bodymenu #headermenu {
+		transform: translateY(0px);
+	}
+
+	.bodymenu #background {
 		padding: 0px;
 	}
 
 	.bodymenu section,
-	.bodymenu footer {
+	.bodymenu footer,
+	.bodymenu header {
 		padding: 0px 15px;
 	}
-
-
-	
-
 
 	#background {
 		margin-left: -5px;
@@ -424,7 +462,7 @@ body {
 	#about .about-content {
 		justify-content: center;
 		flex-wrap: wrap;
-		
+
 	}
 
 	#about .about-content .img-info {
@@ -440,9 +478,23 @@ body {
 		flex-direction: column;
 	}
 
-	.footermenu .footer-container .footer-row .footer-col{
+	.footermenu .footer-container .footer-row .footer-col {
 		align-self: center;
 		text-align: center;
+	}
+
+	#skills .skills-languages,
+	#skills .skills-backend,
+	#skills .skills-frontend,
+	#skills .skills-db,
+	#skills .skills-extra {
+		padding: 0;
+		margin-left: 0;
+	}
+
+	#skills #img-content {
+		justify-content: center;
+		align-items: center;
 	}
 
 }
@@ -451,6 +503,7 @@ body {
 	#about .about-content .about-info .about-data p {
 		width: 100%;
 	}
+
 	#about .about-content .img-info {
 		padding-left: 70px;
 
