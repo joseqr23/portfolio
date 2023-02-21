@@ -7,13 +7,13 @@ const contentSlider = document.querySelector(".images-project");
 const span = document.getElementsByClassName("close")[0];
 
 // Obtener el botón para abrir el modal
-const btn = document.getElementById("myBtn");
+const btnProject = document.getElementById("myBtn");
 const content1 = document.getElementById("fileproject1")
 
-const btn2 = document.getElementById("myBtn2");
+const btnProject2 = document.getElementById("myBtn2");
 const content2 = document.getElementById("fileproject2")
 
-const btn3 = document.getElementById("myBtn3");
+const btnProject3 = document.getElementById("myBtn3");
 const content3 = document.getElementById("fileproject3")
 
 
@@ -58,7 +58,7 @@ function sliderFunction() {
 
 
 // Cuando se hace clic en el botón, mostrar el modal
-btn.onclick = function () {
+btnProject.onclick = function () {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
 		"../img/projects/petz/menu.PNG",
@@ -76,7 +76,7 @@ btn.onclick = function () {
 	info.innerHTML = content1.innerHTML;
 }
 
-btn2.onclick = function () {
+btnProject2.onclick = function () {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
 		"../img/projects/rickandmorty/menu.PNG",
@@ -86,7 +86,7 @@ btn2.onclick = function () {
 	info.innerHTML = content2.innerHTML;
 }
 
-btn3.onclick = function () {
+btnProject3.onclick = function () {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
 		"../img/projects/rickandmorty/listsection.PNG",
