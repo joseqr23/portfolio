@@ -1,226 +1,190 @@
-/* The Modal (background) */
+/* Estilos para el modal */
 .modal {
 	display: none;
-	/* Hidden by default */
-	position: fixed;
-	/* Stay in place */
 	z-index: 1;
-	/* Sit on top */
-	padding-top: 100px;
-	/* Location of the box */
-	left: 0;
-	top: 0;
 	width: 100%;
-	/* Full width */
 	height: 100%;
-	/* Full height */
 	overflow: auto;
-	/* Enable scroll if needed */
-	background-color: rgb(0, 0, 0);
-	/* Fallback color */
-	background-color: rgba(0, 0, 0, 0.9);
-	/* Black w/ opacity */
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content (Image) */
+/* Estilos para el contenido del modal */
 .modal-content {
-	margin: auto;
-	display: block;
+	background: none;
+	border: 0;
+
+	margin: 5% auto;
+	/* Margen para que el contenido del modal esté centrado */
+	padding: 5px;
 	width: 80%;
-	max-width: 700px;
+	/* Ancho del contenido del modal */
+	animation: zoom 0.5s ease-in-out;
+
+	display: flex;
+	flex-direction: row;justify-content: center;
+	align-items: center;
+
+	background: #fff;
+	box-shadow: 6px 6px 28px 1px;
 }
 
 
+/* =============================== Modal Image config =============================== */
 
-/* The Close Button */
+.modal-content .images-project {
+	width: 70%;
+	height: 100%;
+	margin: 2.5px;
+
+}
+
+.carousel-item img {
+	margin: auto;
+	max-width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+
+#secondcarousel span{
+	width: 70%;
+	height: 20%;
+	opacity: 0.4;
+	background-color: #000;
+	border-radius: 5px;
+	color: #000;
+}
+/* =============================== End image =============================== */
+
+
+/* =============================== Modal config =============================== */
+
+.modal-content .info-project {
+	background-color: #fefefe;
+	padding: 8px;
+	margin: 2.5px;
+	text-align: center;
+	border-radius: 3px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	flex-direction: column;
+
+	width: 55%;
+	height: 100%;
+
+}
+
+.modal-content .info-project h1 {
+	font-weight: 700;
+	margin: 5px;
+
+}
+
+.modal-content .info-project p {
+	padding: 0px 5px;
+
+}
+
+.modal-content .info-project span {
+	margin: 5px;
+
+}
+
+.modal-content .info-project #img-tech {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+}
+
+.modal-content .info-project #img-tech img {
+	width: 10%;
+	margin: 5px;
+	border-radius: 2px;
+
+}
+
+.modal-content .info-project a {
+	text-decoration: none;
+	font-size: 15px;
+	color: #000;
+	margin: 5px;
+
+}
+
+.modal-content .info-project a:hover {
+	opacity: 0.8;
+}
+
+.modal-content .info-project a img {
+	border-radius: 50%;
+	width: 30%;
+
+}
+
+/* =============================== End Modal config =============================== */
+
+
+/* Animación de modal */
+@keyframes zoom {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* Estilos para el botón de cerrar el modal */
+
 .close {
-	position: absolute;
-	top: 15px;
-	right: 35px;
-	color: #f1f1f1;
+	position: fixed;
+	left: 94%;
+	top: 1%;
+	color: #000;
 	font-size: 40px;
-	font-weight: bold;
-	transition: 0.3s;
+	margin-left: -20px;
+	padding:0px 10px;
 }
 
 .close:hover,
 .close:focus {
-	color: #bbb;
+	color: red;
 	text-decoration: none;
 	cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
+/* CELLPHONE MEDIAQUERY */
+@media screen and (max-width: 800px) {
 	.modal-content {
+		margin: 20% auto;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.modal-content .images-project {
 		width: 100%;
-	}
-}
-
-
-#modal-container,
-#caption {
-	animation-name: zoom;
-	animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-	from {
-		transform: scale(0)
+		height: 100%;
 	}
 
-	to {
-		transform: scale(1)
+	.carousel-item img {
+		/* max-width: 100%;
+		max-height: 100%; */
+		height: auto;
+		width: auto;
+		object-fit: contain;
+	}
+
+	.modal-content .info-project {
+		width: 100%;
+		height: 100%;
 	}
 }
-
-
-
-/* ==========
-	Carousel
-	==========*/
-
-#carouselExampleControls {
-	width: auto;
-	height: auto;
-	max-width: 499px;
-	max-height: 599px;
-	/* border: 1px solid green; */
-}
-
-.carousel-inner {
-	border-radius: 10px;
-}
-
-.carousel-item {
-	transition: all 0.3s;
-}
-
-#modal-carousel-img {
-	width: auto;
-	height: auto;
-	min-width: 500px;
-	min-height: 500px;
-	max-width: 500px;
-	max-height: 500px;
-	object-fit: cover;
-	border-radius: 10px;
-}
-
-#secondcarousel span {
-	background-color: #363636;
-	width: 50px;
-	height: 70px;
-	border-radius: 10px;
-	opacity: 0.4;
-}
-
-.slider-container .slider-controls span:hover {
-	border-radius: 10px;
-	cursor: pointer;
-	opacity: 1.0;
-}
-
-/* ==========
-  End Carousel
-	==========*/
-
-
-
-/* ==========
-  Div Proyect Info
-	==========*/
-#modal-container {
-	width: auto;
-	height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	margin-top: -50px;
-
-	background: #fff;
-	border-radius: 10px;
-	padding: 10px;
-	/* border: 1px solid blue; */
-}
-
-#modal-container-child {
-	display: flex;
-	width: auto;
-	height: auto;
-	border: 1px solid rgb(0, 0, 0);
-	border-radius: 10px;
-}
-
-/* title */
-#modal-container-child h1{
-	margin-top: 20px;
-	border: 1px solid red;
-}
-
-#modal-container-child #info {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background: #fff;
-	border-radius: 10px;
-	border: 1px solid blue;
-}
-
-
-#modal-container-child #info p {
-	margin: 15px;
-	border: 1px solid blue;
-}
-
-#modal-container-child #info span {
-	border: 1px solid blue;
-
-}
-
-
-#modal-container-child #info #img-tech {
-	width: 70%;
-	height: auto;
-
-	border: 1px solid blue;
-}
-
-/* used tech  */
-#modal-container-child #info #img-tech img {
-	width: 70px;
-	height: 70px;
-	object-fit: contain;
-	border-radius: 2px;
-
-	margin: 5px;
-	/* border: 1px solid red; */
-}
-
-
-/* view repo  */
-#modal-container-child #info a {
-	padding-top: 14px;
-	font-family: 'Raleway';
-	font-size: 20px;
-	color: #000;
-	text-decoration: none;
-}
-
-#modal-container-child #info a:hover {
-	opacity: 0.8;
-}
-
-#modal-container-child #info a img {
-	width: 50px;
-	border-radius: 50%;
-	/* border: 1px solid red; */
-}
-
-
-/* ==========
-  End Div Proyect Info
-	==========*/

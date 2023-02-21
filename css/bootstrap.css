@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 
+:root {
+	--iconhover: red;
+}
+
 .wrapper {
   display: table;
   height: 100%;
@@ -101,13 +105,19 @@
 }
 
 .card-read-more a {
+  color: #000;
   text-decoration: none !important;
   padding: 10px;
   font-weight: 600;
   text-transform: uppercase
 }
 
-
+.card-read-more a:hover {
+  color: var(--iconhover);
+} 
+.card-read-more a:hover:active {
+  color: var(--iconhover);
+} 
 
 .fostrap-logo {
   width: 100px;

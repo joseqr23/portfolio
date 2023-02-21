@@ -1,25 +1,26 @@
-// Get the modal
-let modal = document.getElementById("myModal");
+// Obtener el modal
+const modal = document.getElementById("myModal");
+const info = document.querySelector(".info-project");
+const contentSlider = document.querySelector(".images-project");
 
-// Projects
-let img1 = document.getElementById("myImg1");
-let content1 = document.getElementById("fileproject1")
+// Obtener el elemento para cerrar el modal
+const span = document.getElementsByClassName("close")[0];
 
+// Obtener el botón para abrir el modal
+const btn = document.getElementById("myBtn");
+const content1 = document.getElementById("fileproject1")
 
-let img2 = document.getElementById("myImg2");
-let content2 = document.getElementById("fileproject2")
+const btn2 = document.getElementById("myBtn2");
+const content2 = document.getElementById("fileproject2")
 
+const btn3 = document.getElementById("myBtn3");
+const content3 = document.getElementById("fileproject3")
 
-let img3 = document.getElementById("myImg3");
-let content3 = document.getElementById("fileproject3")
-
-let contentSlider = document.getElementById("slider-modal");
-let info = document.getElementById("info");
 
 function sliderFunction() {
 	let numImages = arguments.length;
 	let carouselHtml = `
-	<center>  
+
 		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 		 <div class="carousel-inner">
 	`;
@@ -47,7 +48,7 @@ function sliderFunction() {
 			<span class="visually-hidden">Next</span>
 		 </button>
 	  </div>
-	  </center>
+	 
 	`;
 
 	return carouselHtml;
@@ -56,8 +57,8 @@ function sliderFunction() {
 
 
 
-
-img1.onclick = function () {
+// Cuando se hace clic en el botón, mostrar el modal
+btn.onclick = function () {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
 		"../img/projects/petz/menu.PNG",
@@ -72,11 +73,10 @@ img1.onclick = function () {
 		"../img/projects/petz/modals.PNG",
 		"../img/projects/petz/admin/applicationsection.PNG",
 	)
-
 	info.innerHTML = content1.innerHTML;
 }
 
-img2.onclick = function () {
+btn2.onclick = function () {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
 		"../img/projects/rickandmorty/menu.PNG",
@@ -86,7 +86,7 @@ img2.onclick = function () {
 	info.innerHTML = content2.innerHTML;
 }
 
-img3.onclick = function () {
+btn3.onclick = function () {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
 		"../img/projects/rickandmorty/listsection.PNG",
@@ -95,10 +95,17 @@ img3.onclick = function () {
 	info.innerHTML = content3.innerHTML;
 }
 
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
+// Cuando se hace clic en la 'x', ocultar el modal
 span.onclick = function () {
-	modal.style.display = "none";
+	if (span.onclick) {
+		modal.style.display = "none";
+
+	}
 }
+
+// Cuando el usuario hace clic fuera del modal, ocultarlo
+// window.onclick = function (event) {
+// 	if (event.target == modal) {
+// 		modal.style.display = "none";
+// 	}
+// }
