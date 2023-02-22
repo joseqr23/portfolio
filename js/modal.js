@@ -7,14 +7,22 @@ const contentSlider = document.querySelector(".images-project");
 const span = document.getElementsByClassName("close")[0];
 
 // Obtener el botón para abrir el modal
-const btnProject = document.getElementById("myBtn");
+const btnProject1 = document.getElementById("myBtn");
+const imgModal1 = document.getElementById("img-modal-1");
 const content1 = document.getElementById("fileproject1")
 
 const btnProject2 = document.getElementById("myBtn2");
+const imgModal2 = document.getElementById("img-modal-2");
 const content2 = document.getElementById("fileproject2")
 
 const btnProject3 = document.getElementById("myBtn3");
+const imgModal3 = document.getElementById("img-modal-3");
 const content3 = document.getElementById("fileproject3")
+
+
+const btnProject4 = document.getElementById("myBtn4");
+const imgModal4 = document.getElementById("img-modal-4");
+const content4 = document.getElementById("fileproject4")
 
 
 function sliderFunction() {
@@ -58,42 +66,73 @@ function sliderFunction() {
 
 
 // Cuando se hace clic en el botón, mostrar el modal
-btnProject.onclick = function () {
+
+btnProject1.addEventListener("click", openModal1)
+imgModal1.addEventListener("click", openModal1)
+
+btnProject2.addEventListener("click", openModal2)
+imgModal2.addEventListener("click", openModal2)
+
+btnProject3.addEventListener("click", openModal3)
+imgModal3.addEventListener("click", openModal3)
+
+btnProject4.addEventListener("click", openModal4)
+imgModal4.addEventListener("click", openModal4)
+
+
+// Funciones para abrir modal
+function openModal1() {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
-		"../img/projects/petz/menu.PNG",
-		"../img/projects/petz/adoptsection.PNG",
-		"../img/projects/petz/user/mypetssection.PNG",
-		"../img/projects/petz/user/mypetsdiagnosticsection.PNG",
-		"../img/projects/petz/profilesection.PNG",
-		"../img/projects/petz/admin/clientsection.PNG",
-		"../img/projects/petz/admin/petsection.PNG",
-		"../img/projects/petz/admin/diagnosticsection.PNG",
-		"../img/projects/petz/admin/petadoptionsection.PNG",
-		"../img/projects/petz/modals.PNG",
-		"../img/projects/petz/admin/applicationsection.PNG",
+		"../img/projects/petz/petz-main.PNG",
+		"../img/projects/petz/petz-adoptsection.PNG",
+		"../img/projects/petz/user/petz-mypetssection.PNG",
+		"../img/projects/petz/user/petz-mypetsdiagnosticsection.PNG",
+		"../img/projects/petz/petz-profilesection.PNG",
+		"../img/projects/petz/admin/petz-clientsection.PNG",
+		"../img/projects/petz/admin/petz-petsection.PNG",
+		"../img/projects/petz/admin/petz-diagnosticsection.PNG",
+		"../img/projects/petz/admin/petz-petadoptionsection.PNG",
+		"../img/projects/petz/petz-modals.PNG",
+		"../img/projects/petz/admin/petz-applicationsection.PNG",
 	)
 	info.innerHTML = content1.innerHTML;
 }
 
-btnProject2.onclick = function () {
+function openModal2() {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
-		"../img/projects/rickandmorty/menu.PNG",
-		"../img/projects/rickandmorty/listsection.PNG",
-		"../img/projects/rickandmorty/detailcharacter.PNG",
+		"../img/projects/rickandmorty/rickandmorty-main.PNG",
+		"../img/projects/rickandmorty/rickandmorty-listsection.PNG",
+		"../img/projects/rickandmorty/rickandmorty-detailcharacter.PNG",
 	)
 	info.innerHTML = content2.innerHTML;
 }
 
-btnProject3.onclick = function () {
+function openModal3() {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
-		"../img/projects/rickandmorty/listsection.PNG",
-		"../img/projects/rickandmorty/detailcharacter.PNG"
+		"../img/projects/pokedex/pokedex-main.png",
+		"../img/projects/pokedex/pokedex-add.png",
+		"../img/projects/pokedex/pokedex-favorites.png",
 	)
 	info.innerHTML = content3.innerHTML;
 }
+
+function openModal4() {
+	modal.style.display = "block";
+	contentSlider.innerHTML = sliderFunction(
+		"../img/projects/portfoliodjango/portfolio-django-main.png",
+		"../img/projects/portfoliodjango/portfolio-django-login.png",
+		"../img/projects/portfoliodjango/portfolio-django-signup.png",
+		"../img/projects/portfoliodjango/portfolio-django-menu-register.png",
+		"../img/projects/portfoliodjango/portfolio-django-menu-register2.png",
+		"../img/projects/portfoliodjango/portfolio-django-menu-register3.png",
+	)
+	info.innerHTML = content4.innerHTML;
+}
+
+
 
 // Cuando se hace clic en la 'x', ocultar el modal
 span.onclick = function () {
@@ -103,9 +142,16 @@ span.onclick = function () {
 	}
 }
 
-// Cuando el usuario hace clic fuera del modal, ocultarlo
+// Cuando el usuario hace click fuera del modal, ocultarlo
 // window.onclick = function (event) {
 // 	if (event.target == modal) {
 // 		modal.style.display = "none";
 // 	}
 // }
+
+// Cuando el usuario hace click en la tecla esc, ocultarlo
+document.addEventListener("keydown", function (event) {
+	if (event.key === "Escape") {
+		modal.style.display = "none";
+	}
+});

@@ -76,6 +76,10 @@
   overflow: hidden;
 }
 
+.img-card:hover {
+  cursor: pointer;
+}
+
 .img-card img {
   width: 100%;
   height: 200px;
