@@ -1,29 +1,28 @@
 :root {
 	--width: 300px;
 	--padding: 10px;
-	--bgcolor: #3a3939;
-	--hovercolor: #212020;
 	--width-collapsed: 60px;
-	--width-collapsed-profile: 80px;
-	--blackcolor1: #171616;
-	--blackcolor2: #0f0e0e;
-	--blackcolor3: #060606;
-	--blackcolor4: #212020;
-	--border-header-logo: 5px;
+
+	--sidemenu-background-color: #0c0c0c;
+	--sidemenu-hover-background-color: #212020;
+	--sidemenu-icon-hover: #fbc646;
+
+	--lines-side-menu: #212020;
+
+	--sidemenu-color-btn-burger: #fff;
+	--sidemenu-color-items: #fff;
+
+	--sidemenu-collapsed-profile-img: 15%;
 
 	--footer-color: #272727;
 	--footer-button-color: #424141;
 	--footer-bar-color: #212020;
 }
 
-#main-container {
-	color: white;
-}
 
 /* Side Menu */
 #sidemenu {
-	background-color: var(--blackcolor2);
-	color: white;
+	background-color: var(--sidemenu-background-color);
 	position: fixed;
 	height: 100%;
 	left: 0;
@@ -32,7 +31,7 @@
 }
 
 #sidemenu a {
-	color: #fff;
+	color: var(--sidemenu-color-items);
 	text-decoration: none;
 }
 
@@ -42,7 +41,13 @@
 	============= */
 #sidemenu #header {
 	box-sizing: boder-box;
-	border-bottom: solid 1px var(--hovercolor);
+	border-bottom: solid 1px var(--lines-side-menu);
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	background: var(--sidemenu-background-color);
+	z-index: 1;
 }
 
 #sidemenu #header #title {
@@ -51,46 +56,30 @@
 }
 
 #sidemenu #header #title img {
-	border-radius: var(--border-header-logo);
+	border-radius: 10%;
 	width: 36px;
 }
 
-#sidemenu #header #title,
 #sidemenu #header #menu-btn {
-	vertical-align: middle;
-}
-
-#sidemenu #header #menu-btn {
-	/* display: inline-block; */
-	
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	cursor: pointer;
 	padding: 10px;
 
 	width: 60px;
 	box-sizing: border-box;
+
+	color: var(--sidemenu-color-btn-burger);
 }
 
-#sidemenu #header #menu-btn .btn-burger {
-	background: #fff;
-	width: 100%;
-	height: 2px;
-	margin: 5px 0;
-}
-
-
-
-#header {
-	display: flex;
-	justify-content: space-between;
+#sidemenu #header #menu-btn:hover {
+	color: var(--sidemenu-icon-hover);
 }
 
 #header #menu-btn:hover {
-	background: var(--hovercolor);
-	color: var(--iconhover);
+	background: var(--sidemenu-hover-background-color);
+	cursor: pointer;
 	width: auto;
 }
 
@@ -101,8 +90,8 @@
 	============= */
 
 #sidemenu #profile {
-	border-bottom: solid 1px var(--hovercolor);
-	padding: var(--padding) 0;
+	border-bottom: solid 1px var(--lines-side-menu);
+	padding: 15px 0;
 	text-align: center;
 }
 
@@ -110,34 +99,34 @@
 	box-sizing: border-box;
 	padding: 10px;
 	margin: auto;
-	/* border: 1px solid blue; */
 }
 
 #sidemenu #profile #photo img {
 	border-radius: 50%;
-	width: 60%;
+	width: 50%;
 }
 
-#sidemenu #profile #photo,
 #sidemenu #profile #name {
-	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+
+	font-size: 22px;
 	overflow: hidden;
 	margin-top: 0px;
 	margin-bottom: 5px;
-
-	/* border: 1px solid blue; */
+}
+#sidemenu #profile #name #dev {
+	margin: -4px;
+	font-size: 16px;
 }
 
 
-/* --------------Contact-------------- */
 
 #sidemenu #profile #contact {
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
 	margin: 0px 15px 0px 15px;
-
-	/* border: 1px solid blue; */
 }
 
 #sidemenu #profile #contact a {
@@ -149,20 +138,11 @@
 	height: 50px;
 	background: #000;
 	border-radius: 50%;
-
-	/* border: 1px solid red; */
 }
 
 #sidemenu #profile #contact a:hover {
-	color: var(--iconhover);
+	color: var(--sidemenu-icon-hover);
 }
-
-#sidemenu #profile #contact img:hover {
-	transform: scale(1.1);
-	filter: brightness(0.5);
-}
-
-/* --------------End Contact-------------- */
 
 /* =============
 	 End Profile
@@ -174,60 +154,60 @@
 		 Items
 	============= */
 
+/* Contenedor de items */
 #sidemenu #menu-items {
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
-#sidemenu #menu-items .item a {
-	display: none;
-}
-
-#sidemenu #menu-items .item .icon {
-	display: inline-block;
-	margin: 5px;
-	box-sizing: border-box;
-	padding: var(--padding);
-	width: var(--width-collapsed);
-}
-
-#sidemenu #menu-items .item .icon,
-#sidemenu #menu-items .item .title {
-	font-size: 18px;
-	vertical-align: middle;
-	overflow: hidden;
-	display: inline-block;
-}
-
-
-#sidemenu #menu-items .item .title {
-	margin-left: 15px;
-}
+/* Contenedor de cada item */
+/* #sidemenu #menu-items .item {
+	border: 1px solid red !important;
+} */
 
 #sidemenu #menu-items .item a {
 	display: flex;
 	align-items: center;
-	align-content: center;
+	padding: 3px 10px;
+	width: 100%;
+	margin: auto;
 }
 
 #sidemenu #menu-items .item a:hover {
-	background: var(--hovercolor);
-	color: var(--iconhover);
+	background: var(--sidemenu-hover-background-color);
+	color: var(--sidemenu-icon-hover);
 }
 
+#sidemenu #menu-items .item a div {
+	margin: 0px 15px;
+}
 
+/* contenedor de ícono de item */
+#sidemenu #menu-items .item .icon {
+	display: inline-block;
+	margin: 5px;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 20%;
+	text-align: center;
+}
+
+/* contenedor de titulo de item */
 #sidemenu #menu-items .item .title {
 	padding: var(--padding) 0;
 }
 
-/* #sidemenu #menu-items .item.separator {
-	height: 1px;
-	border-bottom: solid 1px var(--hovercolor);
-	margin: 15px 0;
-} */
+#sidemenu #menu-items .item .icon,
+#sidemenu #menu-items .item .title {
+	font-size: 20px;
+	overflow: hidden;
+}
 
 /* =============
 	  End Items
 	============= */
+
 
 
 
@@ -236,44 +216,33 @@
 Esto afecta solo al menu cuando esta expandido, no sera su valor por defecto
 	============= */
 .menu-expanded {
+	overflow: auto;
 	width: var(--width);
-	box-shadow: #ff7d7d;
 	transition: all 0.3s;
 }
 
+/* Oculta la barra de desplazamiento del pulgar */
+.menu-expanded::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.menu-expanded::-webkit-scrollbar-thumb {
+	width: 0px;
+	height: 0px;
+}
+
 .menu-expanded #header #title {
-	display: inline-block;
-	width: calc(100% -50px);
-	margin-right: -5px;
-	padding: var(--padding);
-}
-
-.menu-expanded #header #title span {
-	width: calc(var(--width) - var(--width-collapsed)- 5px);
-	overflow: hidden;
-}
-
-.menu-expanded #header #menu-btn {
-	align-items: flex-end;
-}
-
-.menu-expanded #profile #photo {
-	width: 200px;
-}
-
-.menu-expanded #profile #name {
-	width: 100%;
-}
-
-.menu-expanded #menu-items a {
-	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	width: 60px;
 }
 
 /* =============
 	End Menu Expanded
 	============= */
-
-
 
 
 /* =============
@@ -282,62 +251,82 @@ Esto afecta solo al menu cuando esta expandido, no sera su valor por defecto
 	============= */
 .menu-collapsed {
 	width: var(--width-collapsed);
+	overflow: auto;
+	transition: all 0.3s !important;
+}
+
+.menu-collapsed::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.menu-collapsed::-webkit-scrollbar-thumb {
+	width: 0px;
+	height: 0px;
 }
 
 
 .menu-collapsed #header {
-	display: flex;
-	justify-content: center;
-	justify-items: center;
-	width: 100%;
-	/* border: 1px solid red; */
+	width: auto;
 }
-
-/* .menu-collapsed #header #menu-btn {
-	width: 100%;
-} */
-
 
 .menu-collapsed #header #title {
 	display: none;
 }
 
-
 .menu-collapsed #profile {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
+	width: auto !important;
+	height: var(--sidemenu-collapsed-profile-img);
+	max-height: 80px;
+
 }
 
 .menu-collapsed #profile #photo {
-	width: 100px;
 	position: absolute;
 }
 
-.menu-collapsed #profile #name {
-	translate: -200%;
+.menu-collapsed #profile #photo img {
+	width: 50px !important;
+}
+
+.menu-collapsed #profile #name,
+.menu-collapsed #profile #name a {
 	display: none;
 }
 
-.menu-collapsed #profile #contact {
-	translate: -200%;
+.menu-collapsed #profile #contact a,
+.menu-collapsed #profile #contact a .fa {
+	display: none !important;
 }
 
 
+/* .menu-collapsed .item {
+	border: 1px solid blue;
+} */
 
-.menu-collapsed .item {
-	width: 100px;
-	margin-left: -3.0px;
+.menu-collapsed .item .icon {
+	width: 100% !important;
+	height: 100% !important;
+	padding: 10px 0 !important;
 }
 
 .menu-collapsed .item a .title span {
-	display: none;
+	display: none !important
+}
+
+.menu-collapsed #menu-items .item .title {
+	display: none !important;
 }
 
 .menu-collapsed #main-container {
 	display: none;
 }
 
+
 /* =============
-  End Menu Expanded
+  End Menu Collapsed
 	============= */

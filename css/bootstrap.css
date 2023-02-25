@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 
 :root {
-	--iconhover: red;
+	--iconhover: #fbc646;
 }
 
 .wrapper {

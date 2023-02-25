@@ -8,11 +8,11 @@
 	--footer-color: #272727;
 	--footer-button-color: #424141;
 	--footer-bar-color: #212020;
-	--iconhover: red;
+	--iconhover: #fbc646;
 }
 
 body {
-	font-family: 'Montserrat';
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 	/* * opcional 
 	display: flex; 
@@ -97,16 +97,61 @@ body {
  	===================  */
 
 #background {
-	margin-left: -91px;
-	/* margin-top: -25px; */
+	background-color: #0f0e0e;
 }
 
+#background .content-background {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#background .content-background .content-background-text {
+	width: 100%;
+	display: flex;
+
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: left;
+}
+
+#background .content-background .content-background-text h1 {
+	color: #fff;
+	font-size: 6rem;
+	margin-bottom: -2px;
+}
+
+#background .content-background .content-background-text .fa {
+	color: #fff;
+
+	align-self: flex-end;
+	margin-bottom: 15px;
+	animation: cursor-animation 1s infinite;
+	font-size: 30px;
+}
+
+@keyframes cursor-animation {
+
+	0%,
+	100% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+}
+
+
 #background .content-background img {
+	margin-top: -100px;
+
 	max-width: auto;
 	max-height: 500px;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 /* ===================
@@ -164,7 +209,7 @@ body {
 	margin-left: 70px;
 	height: 100%;
 	width: 100%;
-	padding: 10px;		
+	padding: 10px;
 }
 
 #about .about-content .about-info h4 {
@@ -244,6 +289,14 @@ body {
 	object-fit: contain;
 	/* 	
 	border: 1px solid red; */
+}
+
+#skills .skills-languages #img-content img:hover,
+#skills .skills-backend #img-content img:hover,
+#skills .skills-frontend #img-content img:hover,
+#skills .skills-db #img-content img:hover,
+#skills .skills-extra #img-content img:hover {
+	scale: 1.2;
 }
 
 /* ===================
@@ -407,26 +460,6 @@ body {
 }
 
 
-@media screen and (max-width: 1600px) {
-	#sidemenu {
-		overflow: auto;
-	}
-
-	#sidemenu::-webkit-scrollbar {
-		width: 0px;
-		height: 0px;
-	}
-
-	/* Oculta la barra de desplazamiento del pulgar */
-	#sidemenu::-webkit-scrollbar-thumb {
-		width: 0px;
-		height: 0px;
-	}
-}
-
-
-
-
 /* CELLPHONE MEDIAQUERY */
 @media screen and (max-width: 800px) {
 
@@ -456,9 +489,29 @@ body {
 	}
 
 	#background {
-		margin-left: -5px;
-		margin-top: -25px;
-		/* border: 1px solid red; */
+		margin: auto;
+	}
+
+	#background .content-background {
+		margin: auto;
+	}
+
+	#background .content-background img {
+		margin-top: 0px;
+	}
+
+	#background .content-background .content-background-text {
+		justify-content: center;
+	}
+
+	#background .content-background .content-background-text h1 {
+		font-size: 3rem;
+		text-align: center;
+	}
+
+	#background .content-background .content-background-text .fa {
+		margin-bottom: 5px;
+		font-size: 0.8rem;
 	}
 
 	#about .about-content {
@@ -519,6 +572,14 @@ body {
 	}
 }
 
+@media screen and (max-width: 950px) {
+	#background .content-background .content-background-text h1 {
+		color: #fff;
+		font-size: 4.2rem;
+		margin-bottom: -2px;
+	}
+}
+
 @media screen and (max-width: 190px) {
 
 	#skills .skills-languages h3,
@@ -527,5 +588,14 @@ body {
 	#skills .skills-db h3,
 	#skills .skills-extra h3 {
 		font-size: 5vw;
+	}
+
+	#background .content-background .content-background-text h1 {
+		font-size: 5vw;
+	}
+
+	#background .content-background .content-background-text .fa {
+		font-size: 0.4rem;
+		margin-bottom: 0px;
 	}
 }

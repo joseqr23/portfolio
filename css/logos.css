@@ -1,31 +1,30 @@
 /* Menu bar section */
 .fa.fa-home {
-	margin-left: 0.5px;
-	font-size: 30px;
+	font-size: 23px;
 }
 
 .fa.fa-user-o {
-	margin-left: 2.5px;
-	font-size: 33px;
+	font-size: 23px;
 }
 
 .fa.fa-code {
-	margin-left: -1px;
-	font-size: 30px;
+	font-size: 23px;
 }
 
 .fa.fa-tasks {
-	margin-left: 3px;
-	font-size: 30px;
+	font-size: 23px;
 }
 
+.fa.fa-cogs {
+	font-size: 21px;
+}
+
+/* burger */
 .fa.fa-bars {
 	font-size: 36px;
 }
 
-.fa.fa-cogs {
-	font-size: 28px;
-}
+
 
 
 
