@@ -251,8 +251,9 @@ Esto afecta solo al menu cuando esta expandido, no sera su valor por defecto
 	============= */
 .menu-collapsed {
 	width: var(--width-collapsed);
-	overflow: auto;
 	transition: all 0.3s !important;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .menu-collapsed::-webkit-scrollbar {
