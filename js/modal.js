@@ -84,17 +84,17 @@ imgModal4.addEventListener("click", openModal4)
 function openModal1() {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
-		"../img/projects/petz/petz-main.PNG",
-		"../img/projects/petz/petz-adoptsection.PNG",
-		"../img/projects/petz/user/petz-mypetssection.PNG",
-		"../img/projects/petz/user/petz-mypetsdiagnosticsection.PNG",
-		"../img/projects/petz/petz-profilesection.PNG",
-		"../img/projects/petz/admin/petz-clientsection.PNG",
-		"../img/projects/petz/admin/petz-petsection.PNG",
-		"../img/projects/petz/admin/petz-diagnosticsection.PNG",
-		"../img/projects/petz/admin/petz-petadoptionsection.PNG",
-		"../img/projects/petz/petz-modals.PNG",
-		"../img/projects/petz/admin/petz-applicationsection.PNG",
+		"../img/projects/petz/petz-main.webp",
+		"../img/projects/petz/petz-adoptsection.webp",
+		"../img/projects/petz/user/petz-mypetssection.webp",
+		"../img/projects/petz/user/petz-mypetsdiagnosticsection.webp",
+		"../img/projects/petz/petz-profilesection.webp",
+		"../img/projects/petz/admin/petz-clientsection.webp",
+		"../img/projects/petz/admin/petz-petsection.webp",
+		"../img/projects/petz/admin/petz-diagnosticsection.webp",
+		"../img/projects/petz/admin/petz-petadoptionsection.webp",
+		"../img/projects/petz/petz-modals.webp",
+		"../img/projects/petz/admin/petz-applicationsection.webp",
 	)
 	info.innerHTML = content1.innerHTML;
 }
@@ -102,9 +102,9 @@ function openModal1() {
 function openModal2() {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
-		"../img/projects/rickandmorty/rickandmorty-main.PNG",
-		"../img/projects/rickandmorty/rickandmorty-listsection.PNG",
-		"../img/projects/rickandmorty/rickandmorty-detailcharacter.PNG",
+		"../img/projects/rickandmorty/rickandmorty-main.webp",
+		"../img/projects/rickandmorty/rickandmorty-listsection.webp",
+		"../img/projects/rickandmorty/rickandmorty-detailcharacter.webp",
 	)
 	info.innerHTML = content2.innerHTML;
 }
@@ -112,9 +112,9 @@ function openModal2() {
 function openModal3() {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
-		"../img/projects/pokedex/pokedex-main.png",
-		"../img/projects/pokedex/pokedex-add.png",
-		"../img/projects/pokedex/pokedex-favorites.png",
+		"../img/projects/pokedex/pokedex-main.webp",
+		"../img/projects/pokedex/pokedex-add.webp",
+		"../img/projects/pokedex/pokedex-favorites.webp",
 	)
 	info.innerHTML = content3.innerHTML;
 }
@@ -122,12 +122,12 @@ function openModal3() {
 function openModal4() {
 	modal.style.display = "block";
 	contentSlider.innerHTML = sliderFunction(
-		"../img/projects/portfoliodjango/portfolio-django-main.png",
-		"../img/projects/portfoliodjango/portfolio-django-login.png",
-		"../img/projects/portfoliodjango/portfolio-django-signup.png",
-		"../img/projects/portfoliodjango/portfolio-django-menu-register.png",
-		"../img/projects/portfoliodjango/portfolio-django-menu-register2.png",
-		"../img/projects/portfoliodjango/portfolio-django-menu-register3.png",
+		"../img/projects/portfoliodjango/portfolio-django-main.webp",
+		"../img/projects/portfoliodjango/portfolio-django-login.webp",
+		"../img/projects/portfoliodjango/portfolio-django-signup.webp",
+		"../img/projects/portfoliodjango/portfolio-django-menu-register.webp",
+		"../img/projects/portfoliodjango/portfolio-django-menu-register2.webp",
+		"../img/projects/portfoliodjango/portfolio-django-menu-register3.webp",
 	)
 	info.innerHTML = content4.innerHTML;
 }
