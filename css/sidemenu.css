@@ -3,26 +3,15 @@
 	--padding: 10px;
 	--width-collapsed: 60px;
 
-	--sidemenu-background-color: #0c0c0c;
-	--sidemenu-hover-background-color: #212020;
-	--sidemenu-icon-hover: #fbc646;
 
 	--lines-side-menu: #212020;
 
-	--sidemenu-color-btn-burger: #fff;
-	--sidemenu-color-items: #fff;
-
 	--sidemenu-collapsed-profile-img: 15%;
-
-	--footer-color: #272727;
-	--footer-button-color: #424141;
-	--footer-bar-color: #212020;
 }
 
 
 /* Side Menu */
 #sidemenu {
-	background-color: var(--sidemenu-background-color);
 	position: fixed;
 	height: 100%;
 	left: 0;
@@ -31,7 +20,6 @@
 }
 
 #sidemenu a {
-	color: var(--sidemenu-color-items);
 	text-decoration: none;
 }
 
@@ -46,7 +34,6 @@
 	justify-content: space-between;
 	position: sticky;
 	top: 0;
-	background: var(--sidemenu-background-color);
 	z-index: 1;
 }
 
@@ -55,9 +42,13 @@
 	overflow: hidden;
 }
 
-#sidemenu #header #title img {
-	border-radius: 10%;
-	width: 36px;
+#sidemenu #header #title:hover {
+	transition: 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+#sidemenu #header #title .fa {
+	font-size: 25px;
 }
 
 #sidemenu #header #menu-btn {
@@ -69,16 +60,13 @@
 
 	width: 60px;
 	box-sizing: border-box;
-
-	color: var(--sidemenu-color-btn-burger);
 }
 
 #sidemenu #header #menu-btn:hover {
-	color: var(--sidemenu-icon-hover);
+	transition: 0.2s ease-in-out;
 }
 
 #header #menu-btn:hover {
-	background: var(--sidemenu-hover-background-color);
 	cursor: pointer;
 	width: auto;
 }
@@ -115,6 +103,7 @@
 	margin-top: 0px;
 	margin-bottom: 5px;
 }
+
 #sidemenu #profile #name #dev {
 	margin: -4px;
 	font-size: 16px;
@@ -136,12 +125,7 @@
 
 	width: 50px;
 	height: 50px;
-	background: #000;
 	border-radius: 50%;
-}
-
-#sidemenu #profile #contact a:hover {
-	color: var(--sidemenu-icon-hover);
 }
 
 /* =============
@@ -175,8 +159,7 @@
 }
 
 #sidemenu #menu-items .item a:hover {
-	background: var(--sidemenu-hover-background-color);
-	color: var(--sidemenu-icon-hover);
+	transition: 0.2s ease-in-out;
 }
 
 #sidemenu #menu-items .item a div {
@@ -210,7 +193,6 @@
 
 
 
-
 /* =============
 	Menu Expanded
 Esto afecta solo al menu cuando esta expandido, no sera su valor por defecto
@@ -238,6 +220,12 @@ Esto afecta solo al menu cuando esta expandido, no sera su valor por defecto
 	justify-content: center;
 	padding: 10px;
 	width: 60px;
+}
+
+
+/* Theme color button */
+.menu-expanded #collapsed-btn-theme-color {
+	display: none;
 }
 
 /* =============
@@ -279,7 +267,7 @@ Esto afecta solo al menu cuando esta expandido, no sera su valor por defecto
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	width: auto !important;
 	height: var(--sidemenu-collapsed-profile-img);
 	max-height: 80px;
@@ -327,6 +315,28 @@ Esto afecta solo al menu cuando esta expandido, no sera su valor por defecto
 	display: none;
 }
 
+
+/* Theme color button */
+.menu-collapsed #collapsed-btn-theme-color {
+	position: absolute;
+	bottom: 0;
+
+	width: 100%;
+	height: 12%;
+	max-height: 60px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-collapsed #collapsed-btn-theme-color:hover {
+	cursor: pointer;
+}
+
+.menu-collapsed #collapsed-btn-theme-color .fa {
+	font-size: 29px;
+}
 
 /* =============
   End Menu Collapsed

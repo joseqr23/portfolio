@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="./css/body.css">
 	<link rel="stylesheet" href="./css/modal.css">
 	<link rel="stylesheet" href="./css/logos.css">
+	<link rel="stylesheet" href="./css/colormode.css">
 	<link rel="stylesheet" href="./css/bootstrap.css">
 
 
@@ -40,12 +41,12 @@
 <body>
 
 	<!--* SLIDE MENU -->
-	<div id="sidemenu" class="menu-expanded">
+	<div id="sidemenu" class="menu-expanded dark-mode">
 
 		<!-- Header -->
 		<div id="header">
-			<div id="title">
-				<img src="./img/logo/logo.png" alt="">
+			<div id="title" class="btn-theme-color">
+				<i class="fa fa-adjust" aria-hidden="true"></i>
 			</div>
 			<div id="menu-btn">
 				<i class="fa fa-bars" aria-hidden="true"></i>
@@ -141,15 +142,17 @@
 			</div> -->
 
 		</div>
-		<div id="main-container">
 
+		<div id="collapsed-btn-theme-color">
+			<i class="fa fa-adjust" aria-hidden="true"></i>
 		</div>
+		
 	</div>
 
 
 
 	<!--* MENU PROJECT -->
-	<div class="bodymenu">
+	<div class="bodymenu body-dark-mode">
 
 
 		<header id="headermenu">
@@ -158,6 +161,8 @@
 				<a href="#about"><i id="nav-logo" class="fa fa-user-o" aria-hidden="true"></i></a>
 				<a href="#skills"><i id="nav-logo" class="fa fa-code" aria-hidden="true"></i></a>
 				<a href="#projects"><i id="nav-logo" class="fa fa-tasks" aria-hidden="true"></i></a>
+				
+				<a id="nav-btn-theme"><i id="collapsed-btn-theme-color" class="fa fa-adjust" aria-hidden="true"></i></a>
 				<!-- <a href="#etc"><i id="nav-logo" class="fa fa-cogs" aria-hidden="true"></i></i></a> -->
 			</div>
 		</header>
@@ -165,7 +170,7 @@
 		<section id="background">
 			<div class="container">
 				<div class="content-background">
-					<img src="./img/fondomenu2.svg" alt="">
+					<img id="img-background-section" src="./img/fondomenu2.svg" alt="">
 					<div class="content-background-text">
 						<h1 id="welcome"></h1>
 						<i class="fa fa-window-minimize" aria-hidden="true"></i>
@@ -182,13 +187,15 @@
 
 				<div class="home-presentation">
 					<h4>
-						Hola, soy José Quispe y soy desarrollador backend, desde que nació mi interés por la programación no he dejado de aprender.
+						Hola, soy José Quispe y soy desarrollador backend, desde que nació mi interés por la programación no
+						he dejado de aprender.
 						He dedicado horas de estudio e investigación para realizar este portafolio desde cero.
 					</h4>
-					
+
 					<h4>
 						Este pequeño proyecto lo realicé usando las tecnologías de HTML5, CSS3, Javascript y Bootstrap5. A
-						través de esto, quiero compartir un poco de mis conocimientos en programación, así como también los proyectos que he venido realizando en el transcurso de mi aprendizaje.
+						través de esto, quiero compartir un poco de mis conocimientos en programación, así como también los
+						proyectos que he venido realizando en el transcurso de mi aprendizaje.
 					</h4>
 				</div>
 			</div>
@@ -202,7 +209,7 @@
 				<div class="about-content">
 
 					<div class="img-info">
-						<img src="img/logo/logo.png" alt="">
+						<img src="img/avatar/avatar1.png" alt="">
 					</div>
 
 					<div class="about-info">
@@ -695,9 +702,10 @@
 		</footer>
 
 	</div>
-	<script src="./js/modal.js"></script>
-	<script src="./js/sidemenu.js"></script>
 	<script src="./js/index.js"></script>
+	<script src="./js/sidemenu.js"></script>
+	<script src="./js/modal.js"></script>
+	<script src="./js/colormode.js"></script>
 
 	<script src="https://kit.fontawesome.com/cc01e18be7.js" crossorigin="anonymous"></script>
 

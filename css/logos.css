@@ -72,3 +72,7 @@ fa.fa-code-fork{
 #footer-logo-github{
 	font-size: 17px;
 }
+
+#nav-btn-theme:hover{
+	cursor: pointer;
+}

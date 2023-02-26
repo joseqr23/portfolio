@@ -5,9 +5,6 @@
 	--blackcolorbody3: #0f0e0e;
 	--blackcolorbody4: #060606;
 
-	--footer-color: #272727;
-	--footer-button-color: #424141;
-	--footer-bar-color: #212020;
 	--iconhover: #fbc646;
 }
 
@@ -84,7 +81,7 @@ body {
 .bodymenu #headermenu a:hover {
 	background-color: var(--blackcolorbody2);
 	border-radius: 2px;
-	color: red;
+	color: var(--iconhover);
 }
 
 /* ===================
@@ -97,7 +94,7 @@ body {
  	===================  */
 
 #background {
-	background-color: #0f0e0e;
+	transition: all 0.3s !important;
 }
 
 #background .content-background {
@@ -117,14 +114,13 @@ body {
 }
 
 #background .content-background .content-background-text h1 {
-	color: #fff;
 	font-size: 6rem;
 	margin-bottom: -2px;
 }
 
 #background .content-background .content-background-text .fa {
-	color: #fff;
-
+	background: none;
+	background-color: none;
 	align-self: flex-end;
 	margin-bottom: 15px;
 	animation: cursor-animation 1s infinite;
@@ -136,10 +132,14 @@ body {
 	0%,
 	100% {
 		opacity: 0;
+		background: none;
+		background-color: none;
 	}
 
 	50% {
 		opacity: 1;
+		background: none;
+		background-color: none;
 	}
 }
 
@@ -348,8 +348,6 @@ body {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: var(--footer-color);
-	color: #fff;
 }
 
 /* ---------- CONTACT FOOTER ---------- */
@@ -360,8 +358,6 @@ body {
 	flex-wrap: wrap;
 
 	text-align: center;
-	color: #fff;
-	background: var(--footer-bar-color);
 	border-radius: 1px;
 
 	position: relative;
@@ -376,7 +372,6 @@ body {
 }
 
 .footermenu .contact-me #contact-button {
-	background-color: var(--footer-button-color);
 	padding: 10px 20px 10px 20px;
 	width: auto;
 	border-radius: 2px;
@@ -389,7 +384,6 @@ body {
 	text-decoration: none;
 	margin: -10px -20px -10px -20px;
 	padding: 10px 20px 10px 20px;
-	color: #fff;
 }
 
 .footermenu .contact-me #contact-button a:hover {
@@ -415,29 +409,18 @@ body {
 .footermenu .footer-container .footer-row .footer-col {
 	margin: 0px 60px;
 	align-self: flex-start;
-	/* border: 1px solid yellow; */
 }
 
 /* Titles footer */
 .footermenu .footer-container .footer-row .footer-col h3 {
 	font-size: 18px;
 	font-family: 'Roboto';
-	color: #fff;
 }
 
 /* follow and links */
 .footermenu .footer-container .footer-row .footer-col li a {
 	text-decoration: none;
 	font-size: 15px;
-	color: #666873;
-}
-
-.footermenu .footer-container .footer-row .footer-col li a:hover {
-	color: #fff;
-}
-
-.footermenu .copyright {
-	border: 1px solid var(--footer-color);
 }
 
 /* ===================
