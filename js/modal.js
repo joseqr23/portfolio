@@ -24,6 +24,10 @@ const btnProject4 = document.getElementById("myBtn4");
 const imgModal4 = document.getElementById("img-modal-4");
 const content4 = document.getElementById("fileproject4")
 
+const btnProject5 = document.getElementById("myBtn5");
+const imgModal5 = document.getElementById("img-modal-5");
+const content5 = document.getElementById("fileproject5")
+
 
 function sliderFunction() {
 	let numImages = arguments.length;
@@ -79,6 +83,9 @@ imgModal3.addEventListener("click", openModal3)
 btnProject4.addEventListener("click", openModal4)
 imgModal4.addEventListener("click", openModal4)
 
+btnProject5.addEventListener("click", openModal5)
+imgModal5.addEventListener("click", openModal5)
+
 
 // Funciones para abrir modal
 function openModal1() {
@@ -130,6 +137,23 @@ function openModal4() {
 		"../img/projects/portfoliodjango/portfolio-django-menu-register3.webp",
 	)
 	info.innerHTML = content4.innerHTML;
+}
+
+function openModal5() {
+	modal.style.display = "block";
+	contentSlider.innerHTML = sliderFunction(
+		"../img/projects/appservices/back/app-services-back-api-payments.webp",
+		"../img/projects/appservices/back/app-services-back-api-services.webp",
+		"../img/projects/appservices/front/app-services-front-login.webp",
+		"../img/projects/appservices/front/app-services-front-signup.webp",
+		"../img/projects/appservices/front/app-services-front-payments.webp",
+		"../img/projects/appservices/front/app-services-front-expired-payments.webp",
+		"../img/projects/appservices/front/app-services-front-add-payment.webp",
+		"../img/projects/appservices/front/app-services-front-services.webp",
+		"../img/projects/appservices/front/app-services-front-add-services.webp",
+		"../img/projects/appservices/front/app-services-front-del-put-services.webp",
+	)
+	info.innerHTML = content5.innerHTML;
 }
 
 

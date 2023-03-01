@@ -10,10 +10,14 @@
 
 /* Estilos para el contenido del modal */
 .modal-content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
 	background: none;
 	border: 0;
-
-	margin: 5% auto;
+	margin: auto auto;
 	/* Margen para que el contenido del modal esté centrado */
 	padding: 5px;
 	width: 80%;
@@ -29,6 +33,16 @@
 	box-shadow: 6px 6px 28px 1px;
 }
 
+/* Animación de modal */
+@keyframes zoom {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
 
 /* =============================== Modal Image config =============================== */
 
@@ -36,7 +50,6 @@
 	width: 45%;
 	height: 100%;
 	margin: 2.5px;
-
 }
 
 .carousel-item {
@@ -150,17 +163,6 @@
 /* =============================== End Modal config =============================== */
 
 
-/* Animación de modal */
-@keyframes zoom {
-	0% {
-		transform: scale(0);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
-
 /* Estilos para el botón de cerrar el modal */
 
 .close {
@@ -172,7 +174,7 @@
 	margin-left: -20px;
 
 	padding: 11px 18px;
-	background: #0000005b;
+	background: #2828285b;
 	border-radius: 50%;
 
 	display: flex;
@@ -182,7 +184,7 @@
 
 .close:hover,
 .close:focus {
-	background: #00000041;
+	background: rgba(61, 61, 61, 0.352);
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -190,11 +192,28 @@
 /* CELLPHONE MEDIAQUERY */
 @media screen and (max-width: 800px) {
 	.modal-content {
-		margin: 20% auto;
+		margin: 20% auto !important;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		position: static;
+		left: auto;
+		top: auto;
+
+		animation: zoomit 0.5s ease-in-out;
 	}
+
+	@keyframes zoomit {
+		0% {
+			transform: scale(0);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+
 
 	.modal-content .images-project {
 		width: 100%;
@@ -224,5 +243,38 @@
 		background: #00000041;
 		text-decoration: none;
 		cursor: pointer;
+	}
+}
+
+
+@media screen and (max-width: 1100px) {
+	.modal-content {
+		margin: 5% auto;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		position: static;
+		left: auto;
+		top: auto;
+		transform: none;
+
+		animation: zoomit 0.5s ease-in-out;
+	}
+
+	@keyframes zoomit {
+		0% {
+			transform: scale(0);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	.modal-content .images-project,
+	.modal-content .info-project {
+		width: 100%;
+		height: 100%;
 	}
 }

@@ -31,7 +31,7 @@ body {
 
 /* Control body sections */
 .bodymenu section {
-	padding-left: 90px;
+	padding-left: 60px;
 }
 
 /* Linea de texto */
@@ -146,7 +146,7 @@ body {
 
 #background .content-background img {
 	margin-top: -100px;
-	margin-left: -90px;
+	margin-left: -60px;
 	max-width: auto;
 	max-height: 500px;
 	width: 100%;
@@ -170,6 +170,7 @@ body {
 
 #homepage .home-presentation {
 	margin-top: 20px;
+	padding-right: 10px;
 }
 
 /* ===================
