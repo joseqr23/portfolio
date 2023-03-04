@@ -4,6 +4,7 @@
 	--sidemenu-dark-color-items: #fff;
 	--sidemenu-dark-color-background: #0A0A0A;
 
+	--sidemenu-dark-color-profile-social-background: #0f0e0e;
 	--sidemenu-hover-dark-color-background: #141414;
 	--sidemenu-icon-hover-dark-color: #fbc646;
 
@@ -11,6 +12,7 @@
 	--sidemenu-light-color-items: #0c0c0c;
 	--sidemenu-light-color-background: #EBEBEB;
 
+	--sidemenu-light-color-profile-social-background: #E1DEDE; 
 	--sidemenu-hover-light-color-background: #E0E0E0;
 	--sidemenu-icon-hover-light-color: #464646;
 
@@ -76,8 +78,14 @@
 }
 
 .light-mode #profile #contact a {
-	background: #E0E0E0;
+	background: var(--sidemenu-light-color-profile-social-background);
 }
+
+.light-mode #profile #photo img {
+	background-color: var(--sidemenu-light-color-profile-social-background);
+}
+
+
 
 /* bodymenu */
 .body-light-mode {
@@ -160,7 +168,10 @@
 }
 
 .dark-mode #profile #contact a {
-	background: #0f0e0e;
+	background: var(--sidemenu-dark-color-profile-social-background);
+}
+.dark-mode #profile #photo img {
+	background-color: var(--sidemenu-dark-color-profile-social-background);
 }
 
 /* bodymenu */
